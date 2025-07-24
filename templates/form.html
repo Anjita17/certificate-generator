@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Certificate Generator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f5f7fa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      form {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 320px;
+      }
+      input,
+      button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+      }
+      button {
+        background: #0a2540;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      h2 {
+        text-align: center;
+        color: #0a2540;
+      }
+    </style>
+  </head>
+  <body>
+    <form method="POST" action="/generate">
+      <h2>Generate Certificate</h2>
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="text" name="course" placeholder="Course Name" required />
+      <input type="text" name="date" placeholder="Completion Date" required />
+      <button type="submit">Generate</button>
+    </form>
+  </body>
+</html>
