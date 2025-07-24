@@ -17,11 +17,10 @@ def generate():
     # Load certificate template
     certificate = Image.open("Certificate.png")
 
-    # Fonts
-    font_path = "C:/Windows/Fonts/arialbd.ttf"  # Adjust path if needed
-    name_font = ImageFont.truetype(font_path, 60)
-    course_font = ImageFont.truetype(font_path, 40)
-    date_font = ImageFont.truetype(font_path, 36)
+    # Use default fonts
+    name_font = ImageFont.load_default()
+    course_font = ImageFont.load_default()
+    date_font = ImageFont.load_default()
 
     # Draw text
     draw = ImageDraw.Draw(certificate)
@@ -50,6 +49,3 @@ def generate():
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=8000)
-@app.route('/')
-def index():
-    return "🎉 Flask app is working on Railway!"
